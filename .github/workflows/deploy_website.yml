@@ -1,3 +1,5 @@
+name: Deploy website
+
 on:
   workflow_dispatch:
     inputs:
@@ -24,7 +26,7 @@ jobs:
       - name: Install jq
         run: |
           apt-get update
-          apt-get install -y jq
+          apt-get install -y jq git
 
       - name: Download latest of library
         run: curl https://qpm.qilletni.dev/packages/qilletni/${{ github.event.inputs.library }}/latest -o /tmp/library.qll
