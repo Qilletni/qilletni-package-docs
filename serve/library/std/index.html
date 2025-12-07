@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html xmlns:function="http://www.w3.org/1999/xhtml"
+      xmlns:entity="http://www.w3.org/1999/xhtml"
+      xmlns:formatteddoc="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Qilletni Docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+          integrity="sha384-..."
+          crossorigin="anonymous">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+    <!-- Your SCSS compiled to style.css (matching the final style) -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    
+    <nav class="teal">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo" style="margin-left: 1rem;">Qilletni Docs</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+                <li>
+                    <!-- Search form: style with Materialize or custom CSS -->
+                    <form onsubmit="return false;" class="nav-search">
+                        <div class="input-field">
+                            <i class="material-icons prefix search-icon">search</i>
+                            <input id="search-input" type="text" placeholder="Search docs..." required>
+                        </div>
+                    </form>
+                </li>
+
+                <li><a href="/">All Libraries</a></li>
+                <li>
+                    <a href="/library/std/files.html">Library Files</a>
+                </li>
+                <li>
+                    <a href="/library/std/index.html">std</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="search-popup" class="card" style="display: none;">
+        <ul id="search-results-list" class="collection" style="margin: 0;"></ul>
+    </div>
+
+
+    <!-- Main container -->
+    <div class="container" style="margin-top: 2rem;">
+        <!-- Title & Intro -->
+        <div class="row title-row">
+            <div class="col s12">
+                <h2 class="library-title">Library <span>std</span></h2>
+                <div class="library-meta">
+                    <span class="library-version"><span>v1.0.0-SNAPSHOT</span> &#x2022; <span>Adam Yarris</span></span>
+                    <span>
+                    <a class="library-github" target="_blank" href="https://github.com/RubbaBoy/Qilletni/tree/master/qilletni-lib-std">GitHub</a>
+                    <a class="library-examples" target="_blank" href="https://github.com/RubbaBoy/Qilletni/tree/master/qilletni-lib-std/examples">Examples</a>
+                </span>
+                </div>
+
+                <div class="page-description">
+                    <p>The standard library for the Qilletni language</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Library Sections Row -->
+        <div class="row library-sections">
+            <!-- Entities Section -->
+            <div class="card l-box library-category">
+                <div class="card-content">
+                    <h3 class="content-subhead">Entities</h3>
+                    <div class="category-list">
+                        <table class="highlight responsive-table">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/int.html">int</a>
+                                </td>
+                                <td>An integer value, up to 64 bits.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/double.html">double</a>
+                                </td>
+                                <td>A double precision floating point value, up to 64 bits.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/string.html">string</a>
+                                </td>
+                                <td>A character string.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/boolean.html">boolean</a>
+                                </td>
+                                <td>A true/false value.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/collection.html">collection</a>
+                                </td>
+                                <td>A playlist or collection of songs</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/song.html">song</a>
+                                </td>
+                                <td>A provider-agnostic piece of music that can be interacted with through service providers.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/album.html">album</a>
+                                </td>
+                                <td>A provider-agnostic musical album that can be interacted with through service providers.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/list.html">list</a>
+                                </td>
+                                <td>A dynamic collection of types.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/java.html">java</a>
+                                </td>
+                                <td>A reference to a Java object, for interacting with native methods.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/function.html">function</a>
+                                </td>
+                                <td>A Qilletni native type.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/Artist.html">Artist</a>
+                                </td>
+                                <td>An artist who creates songs.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/Date.html">Date</a>
+                                </td>
+                                <td>An entity that may store a date (not time).</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/Map.html">Map</a>
+                                </td>
+                                <td>A HashMap wrapper that may store keys and values of any type.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/Optional.html">Optional</a>
+                                </td>
+                                <td>An entity that may either hold a value or be empty. The value being held may be anything.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/Queue.html">Queue</a>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/Stack.html">Stack</a>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/User.html">User</a>
+                                </td>
+                                <td>An end user/listener of a song provider that may own playlists.</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Global Functions Section -->
+            <div class="card l-box library-category">
+                <div class="card-content">
+                    <h3 class="content-subhead">Global Functions</h3>
+                    <div class="category-list">
+                        <table class="highlight responsive-table">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+_emptyJavaMap%28%29">native fun _emptyJavaMap()</a>
+                                </td>
+                                <td>Creates an empty HashMap instance.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+backtrace%28%29">native fun backtrace()</a>
+                                </td>
+                                <td>Prints out the current stacktrace of the program.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+breakpoint%28%29">native fun breakpoint()</a>
+                                </td>
+                                <td>Pauses the program and puts the user in a debugger.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+breakpoint%28condition%29">native fun breakpoint(condition)</a>
+                                </td>
+                                <td>Pauses the program and puts the user in a debugger if the given condition is true.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+bt%28%29">native fun bt()</a>
+                                </td>
+                                <td>Prints out the current stacktrace of the program.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+currentTimeMillis%28%29">native fun currentTimeMillis()</a>
+                                </td>
+                                <td>Gets the current time in milliseconds</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+defaultPlay%28songToPlay%29">native fun defaultPlay(songToPlay)</a>
+                                </td>
+                                <td>Play a song via the default &quot;play&quot; keyword invoked as a function, which will call the default &quot;play&quot; action as if no redirection happened.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+exit%28code%29">native fun exit(code)</a>
+                                </td>
+                                <td>Exits the program with the given exit code.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+functions%28%29">native fun functions()</a>
+                                </td>
+                                <td>Prints out the functions in the current scope and all parents.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+functions%28entityInstance%29">native fun functions(entityInstance)</a>
+                                </td>
+                                <td>Prints out the functions in the given entity&#39;s scope and all parents.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+getEnv%28name%29">native fun getEnv(name)</a>
+                                </td>
+                                <td>Gets the environment variable of a given name. This will return a string, or throw an error if it can&#39;t be found.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#fun+getEnv%28name%2C+default%29">fun getEnv(name, default)</a>
+                                </td>
+                                <td>Gets the environment variable of a given name. If the value is not found, a default value is returned.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+hasEnv%28name%29">native fun hasEnv(name)</a>
+                                </td>
+                                <td>Checks if an environment variable is set.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+print%28obj%29">native fun print(obj)</a>
+                                </td>
+                                <td>Prints a string representation of the given object to the console, followed by a newline character.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#fun+printf%28obj%2C+formatParams%29">fun printf(obj, formatParams)</a>
+                                </td>
+                                <td>Prints a given string to the console, followed by a newline character. The string is formatted with string.format using the parameters provided.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+processBackground%28%29">native fun processBackground()</a>
+                                </td>
+                                <td>Process background tasks until the program is terminated.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+random%28min%2C+max%29">native fun random(min, max)</a>
+                                </td>
+                                <td>Generates a random integer between an inclusive lower bound and an exclusive upper bound.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+readLine%28%29">native fun readLine()</a>
+                                </td>
+                                <td>Reads a line of input from the console.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+redirectPlayToFunction%28fn%29">native fun redirectPlayToFunction(fn)</a>
+                                </td>
+                                <td>Starts making all plays invoke the given function with 1 parameter of the song.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+redirectPlayToList%28songList%29">native fun redirectPlayToList(songList)</a>
+                                </td>
+                                <td>Starts making all plays add to a song list instead of the previous play action.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+redirectReset%28%29">native fun redirectReset()</a>
+                                </td>
+                                <td>Stops all &#39;play&#39;s from any set action and returns it back to its default action.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+setFetchResolveStrategy%28resolveStrategy%29">native fun setFetchResolveStrategy(resolveStrategy)</a>
+                                </td>
+                                <td>Sets the resolve strategy of fetched tracks to the given strategy. The strategy is</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+vars%28%29">native fun vars()</a>
+                                </td>
+                                <td>Prints out the variables and their values in the current scope and all parents.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+vars%28entityInstance%29">native fun vars(entityInstance)</a>
+                                </td>
+                                <td>Prints out the variables and their values in the given entity&#39;s scope and all parents.</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Import Aliases Section -->
+            <!--                <div class="card l-box library-category">-->
+            <!--                    <div class="card-content">-->
+            <!--                        <h3 class="content-subhead">Import Aliases</h3>-->
+            <!--                        <div class="category-list">-->
+            <!--                            <table class="highlight responsive-table">-->
+            <!--                                <tbody>-->
+            <!--                                <tr>-->
+            <!--                                    <td><a href="#">spotify</a></td>-->
+            <!--                                    <td>This is a description for spotify.</td>-->
+            <!--                                </tr>-->
+            <!--                                <tr>-->
+            <!--                                    <td><a href="#">spotify.builder</a></td>-->
+            <!--                                    <td>This is a description for spotify.builder.</td>-->
+            <!--                                </tr>-->
+            <!--                                <tr>-->
+            <!--                                    <td><a href="#">spotify.friends</a></td>-->
+            <!--                                    <td>This is a description for spotify.friends.</td>-->
+            <!--                                </tr>-->
+            <!--                                <tr>-->
+            <!--                                    <td><a href="#">audio</a></td>-->
+            <!--                                    <td>This is a description for audio.</td>-->
+            <!--                                </tr>-->
+            <!--                                </tbody>-->
+            <!--                            </table>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+
+            <!-- Extension Functions Section -->
+            <div class="card l-box library-category">
+                <div class="card-content">
+                    <h3 class="content-subhead">Extension Functions</h3>
+                    <div class="category-list">
+                        <table class="highlight responsive-table">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/album.html#native+fun+getAllArtists%28%29+on+album">native fun getAllArtists() on album</a>
+                                </td>
+                                <td>Gets all Artist s of the album.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/album.html#native+fun+getArtist%28%29+on+album">native fun getArtist() on album</a>
+                                </td>
+                                <td>Gets the primary Artist of the album.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/album.html#native+fun+getId%28%29+on+album">native fun getId() on album</a>
+                                </td>
+                                <td>Gets the ID of an album.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/album.html#native+fun+getName%28%29+on+album">native fun getName() on album</a>
+                                </td>
+                                <td>Gets the name of an album.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/album.html#native+fun+getUrl%28%29+on+album">native fun getUrl() on album</a>
+                                </td>
+                                <td>Gets the URL of an album.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/collection.html#native+fun+anySongMatches%28fn%29+on+collection">native fun anySongMatches(fn) on collection</a>
+                                </td>
+                                <td>Loops through all songs of the collection and checks if the condition is matched.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/collection.html#native+fun+containsArtist%28artist%29+on+collection">native fun containsArtist(artist) on collection</a>
+                                </td>
+                                <td>Checks if the collection contains any song with the given artist as the song&#39;s first artist.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/collection.html#native+fun+getCreator%28%29+on+collection">native fun getCreator() on collection</a>
+                                </td>
+                                <td>Gets the creator of the collection.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/collection.html#native+fun+getId%28%29+on+collection">native fun getId() on collection</a>
+                                </td>
+                                <td>Gets the ID of the collection. This is an ID identifiable by the provider which owns this collection.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/collection.html#native+fun+getName%28%29+on+collection">native fun getName() on collection</a>
+                                </td>
+                                <td>Gets the name of the collection.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/collection.html#native+fun+getTrackCount%28%29+on+collection">native fun getTrackCount() on collection</a>
+                                </td>
+                                <td>Gets the number of tracks in the collection.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/collection.html#native+fun+getUrl%28%29+on+collection">native fun getUrl() on collection</a>
+                                </td>
+                                <td>Gets the URL of the collection.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/collection.html#native+fun+nextSong%28%29+on+collection">native fun nextSong() on collection</a>
+                                </td>
+                                <td>Gets the next song as if it were being played.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/list.html#native+fun+add%28item%29+on+list">native fun add(item) on list</a>
+                                </td>
+                                <td>Adds an item to the list.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/list.html#native+fun+add%28index%2C+item%29+on+list">native fun add(index, item) on list</a>
+                                </td>
+                                <td>Adds an item to the list at the specified index.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/list.html#native+fun+addAll%28itemList%29+on+list">native fun addAll(itemList) on list</a>
+                                </td>
+                                <td>Adds all items of the given list to the current list.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/list.html#native+fun+contains%28item%29+on+list">native fun contains(item) on list</a>
+                                </td>
+                                <td>Checks if the given item is contained in the list.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/list.html#native+fun+indexOf%28item%29+on+list">native fun indexOf(item) on list</a>
+                                </td>
+                                <td>Checks the index of the given item in the list.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/list.html#fun+isEmpty%28lst%29+on+list">fun isEmpty(lst) on list</a>
+                                </td>
+                                <td>Checks if the list is empty.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/list.html#native+fun+join%28delimiter%29+on+list">native fun join(delimiter) on list</a>
+                                </td>
+                                <td>Joins the items of the list into a single string.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/list.html#native+fun+remove%28index%29+on+list">native fun remove(index) on list</a>
+                                </td>
+                                <td>Removes an item from the list at the given index.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/list.html#native+fun+size%28%29+on+list">native fun size() on list</a>
+                                </td>
+                                <td>Gets the size of the list.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/list.html#native+fun+sort%28%29+on+list">native fun sort() on list</a>
+                                </td>
+                                <td>Sorts a list of numbers or strings in-place.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/list.html#native+fun+sortReverse%28%29+on+list">native fun sortReverse() on list</a>
+                                </td>
+                                <td>Sorts a list of numbers or strings in-place, in reverse order.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/list.html#native+fun+subList%28fromIndex%2C+toIndex%29+on+list">native fun subList(fromIndex, toIndex) on list</a>
+                                </td>
+                                <td>Returns a portion of the current list from the specified starting index to the end of the list.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/song.html#native+fun+getAlbum%28%29+on+song">native fun getAlbum() on song</a>
+                                </td>
+                                <td>Gets the Album the song is on.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/song.html#native+fun+getAllArtists%28%29+on+song">native fun getAllArtists() on song</a>
+                                </td>
+                                <td>Gets all Artist entities on the song.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/song.html#native+fun+getArtist%28%29+on+song">native fun getArtist() on song</a>
+                                </td>
+                                <td>Gets the Artist entity of the primary artist on the song</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/song.html#native+fun+getDuration%28%29+on+song">native fun getDuration() on song</a>
+                                </td>
+                                <td>Gets the duration of the song in milliseconds.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/song.html#native+fun+getId%28%29+on+song">native fun getId() on song</a>
+                                </td>
+                                <td>Gets the ID of the song. This is an ID identifiable by the provider which owns this song.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/song.html#native+fun+getTitle%28%29+on+song">native fun getTitle() on song</a>
+                                </td>
+                                <td>Gets the name of the song.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/song.html#native+fun+getUrl%28%29+on+song">native fun getUrl() on song</a>
+                                </td>
+                                <td>Gets the URL of the song. If it was not defined with a URL, an empty string is returned.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/string.html#native+fun+contains%28comparing%29+on+string">native fun contains(comparing) on string</a>
+                                </td>
+                                <td>Checks if the string contains the given string.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/string.html#native+fun+format%28formatList%29+on+string">native fun format(formatList) on string</a>
+                                </td>
+                                <td>Performs typical C-style string formatting. Only strings, doubles, and integers are supported.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/string.html#native+fun+length%28%29+on+string">native fun length() on string</a>
+                                </td>
+                                <td>Gets the length of a string.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/string.html#native+fun+substring%28beginIndex%29+on+string">native fun substring(beginIndex) on string</a>
+                                </td>
+                                <td>Returns a substring of the current string from the given index.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/string.html#native+fun+substring%28beginIndex%2C+endIndex%29+on+string">native fun substring(beginIndex, endIndex) on string</a>
+                                </td>
+                                <td>Returns a substring of the current string from and to specified indices</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/string.html#native+fun+toInt%28%29+on+string">native fun toInt() on string</a>
+                                </td>
+                                <td>Converts the string to an integer.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/string.html#native+fun+toLower%28%29+on+string">native fun toLower() on string</a>
+                                </td>
+                                <td>Returns the string in all lowercase.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/std/entity/string.html#native+fun+toUpper%28%29+on+string">native fun toUpper() on string</a>
+                                </td>
+                                <td>Returns the string in all uppercase.</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Function Definitions -->
+        <div class="row function-definitions">
+            <div class="col s12">
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+_emptyJavaMap%28%29">
+        <span class="code">native fun _emptyJavaMap()</span>
+        <a class="function-anchor right" href="#native+fun+_emptyJavaMap%28%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Creates an empty <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashMap.html" target="_blank">HashMap</a> instance.</p>
+</div></p>
+
+        <!-- Params -->
+        
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                <a class="return-type" href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashMap.html" target="_blank"> HashMap </a>
+            </span>
+            <p><div class="markdown-description"><p>An instance of a <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashMap.html" target="_blank">HashMap</a></p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/util_map.ql.html">std:util/map.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+backtrace%28%29">
+        <span class="code">native fun backtrace()</span>
+        <a class="function-anchor right" href="#native+fun+backtrace%28%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Prints out the current stacktrace of the program.</p>
+</div></p>
+
+        <!-- Params -->
+        
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/debug_debug.ql.html">std:debug/debug.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+breakpoint%28%29">
+        <span class="code">native fun breakpoint()</span>
+        <a class="function-anchor right" href="#native+fun+breakpoint%28%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Pauses the program and puts the user in a debugger.</p>
+</div></p>
+
+        <!-- Params -->
+        
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                <a class="return-type" href="/library/std/entity/int.html"> int </a>
+            </span>
+            <p><div class="markdown-description"><p>The number of milliseconds spent in the debugger</p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/breakpoint.ql.html">std:breakpoint.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+breakpoint%28condition%29">
+        <span class="code">native fun breakpoint(condition)</span>
+        <a class="function-anchor right" href="#native+fun+breakpoint%28condition%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Pauses the program and puts the user in a debugger if the given condition is <code>true</code>.</p>
+</div></p>
+
+        <!-- Params -->
+        
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                <a class="return-type" href="/library/std/entity/int.html"> int </a>
+            </span>
+            <p><div class="markdown-description"><p>The number of milliseconds spent in the debugger, or -1 if the condition is <code>false</code></p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/breakpoint.ql.html">std:breakpoint.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+bt%28%29">
+        <span class="code">native fun bt()</span>
+        <a class="function-anchor right" href="#native+fun+bt%28%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Prints out the current stacktrace of the program.</p>
+</div></p>
+
+        <!-- Params -->
+        
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/debug_debug.ql.html">std:debug/debug.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+currentTimeMillis%28%29">
+        <span class="code">native fun currentTimeMillis()</span>
+        <a class="function-anchor right" href="#native+fun+currentTimeMillis%28%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Gets the current time in milliseconds</p>
+</div></p>
+
+        <!-- Params -->
+        
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                <a class="return-type" href="/library/std/entity/int.html"> int </a>
+            </span>
+            <p><div class="markdown-description"><p>The current time in milliseconds</p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/core.ql.html">std:core.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+defaultPlay%28songToPlay%29">
+        <span class="code">native fun defaultPlay(songToPlay)</span>
+        <a class="function-anchor right" href="#native+fun+defaultPlay%28songToPlay%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Play a song via the default &quot;play&quot; keyword invoked as a function, which will call the default &quot;play&quot; action as if no redirection happened.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>songToPlay</code>
+                        <span>
+                            (<a href="/library/std/entity/song.html"> song </a>)
+                        </span>
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The song</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/music_play_redirect.ql.html">std:music/play_redirect.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+exit%28code%29">
+        <span class="code">native fun exit(code)</span>
+        <a class="function-anchor right" href="#native+fun+exit%28code%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Exits the program with the given exit code.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>code</code>
+                        <span>
+                            (<a href="/library/std/entity/int.html"> int </a>)
+                        </span>
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The exit code to exit with</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/core.ql.html">std:core.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+functions%28%29">
+        <span class="code">native fun functions()</span>
+        <a class="function-anchor right" href="#native+fun+functions%28%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Prints out the functions in the current scope and all parents.</p>
+</div></p>
+
+        <!-- Params -->
+        
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/debug_debug.ql.html">std:debug/debug.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+functions%28entityInstance%29">
+        <span class="code">native fun functions(entityInstance)</span>
+        <a class="function-anchor right" href="#native+fun+functions%28entityInstance%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Prints out the functions in the given entity's scope and all parents.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>entityInstance</code>
+                        
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The instance of the entity to get the scope of</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/debug_debug.ql.html">std:debug/debug.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+getEnv%28name%29">
+        <span class="code">native fun getEnv(name)</span>
+        <a class="function-anchor right" href="#native+fun+getEnv%28name%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Gets the environment variable of a given name. This will return a string, or throw an error if it can't be found.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>name</code>
+                        <span>
+                            (<a href="/library/std/entity/string.html"> string </a>)
+                        </span>
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The name of the environment variable to get</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                
+            </span>
+            <p><div class="markdown-description"><p>The value of the environment variable</p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/core.ql.html">std:core.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="fun+getEnv%28name%2C+default%29">
+        <span class="code">fun getEnv(name, default)</span>
+        <a class="function-anchor right" href="#fun+getEnv%28name%2C+default%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Gets the environment variable of a given name. If the value is not found, a default value is returned.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>name</code>
+                        <span>
+                            (<a href="/library/std/entity/string.html"> string </a>)
+                        </span>
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The name of the environment variable to get</p>
+</div></span>
+                    </td>
+                </tr>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>defaultValue</code>
+                        <span>
+                            (<a href="/library/std/entity/string.html"> string </a>)
+                        </span>
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The default value to return if the environment variable is not found</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                
+            </span>
+            <p><div class="markdown-description"><p>The value of the environment variable</p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/core.ql.html">std:core.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+hasEnv%28name%29">
+        <span class="code">native fun hasEnv(name)</span>
+        <a class="function-anchor right" href="#native+fun+hasEnv%28name%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Checks if an environment variable is set.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>name</code>
+                        <span>
+                            (<a href="/library/std/entity/string.html"> string </a>)
+                        </span>
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The name of the environment variable to check for</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                <a class="return-type" href="/library/std/entity/boolean.html"> boolean </a>
+            </span>
+            <p><div class="markdown-description"><p>true if the environment variable is set, false if otherwise</p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/core.ql.html">std:core.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+print%28obj%29">
+        <span class="code">native fun print(obj)</span>
+        <a class="function-anchor right" href="#native+fun+print%28obj%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Prints a string representation of the given object to the console, followed by a newline character.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>obj</code>
+                        
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The object to print, of any type.</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/core.ql.html">std:core.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="fun+printf%28obj%2C+formatParams%29">
+        <span class="code">fun printf(obj, formatParams)</span>
+        <a class="function-anchor right" href="#fun+printf%28obj%2C+formatParams%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Prints a given string to the console, followed by a newline character. The string is formatted with <code>string.format</code> using the parameters provided.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>obj</code>
+                        
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The object to print, of any type.</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/core.ql.html">std:core.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+processBackground%28%29">
+        <span class="code">native fun processBackground()</span>
+        <a class="function-anchor right" href="#native+fun+processBackground%28%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Process background tasks until the program is terminated.</p>
+</div></p>
+
+        <!-- Params -->
+        
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/background.ql.html">std:background.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+random%28min%2C+max%29">
+        <span class="code">native fun random(min, max)</span>
+        <a class="function-anchor right" href="#native+fun+random%28min%2C+max%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Generates a random integer between an inclusive lower bound and an exclusive upper bound.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>min</code>
+                        <span>
+                            (<a href="/library/std/entity/int.html"> int </a>)
+                        </span>
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The inclusive minimum range of the random number</p>
+</div></span>
+                    </td>
+                </tr>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>max</code>
+                        <span>
+                            (<a href="/library/std/entity/int.html"> int </a>)
+                        </span>
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The exclusive maximum range of the random number</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                <a class="return-type" href="/library/std/entity/int.html"> int </a>
+            </span>
+            <p><div class="markdown-description"><p>A random integer between the given range</p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/math.ql.html">std:math.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+readLine%28%29">
+        <span class="code">native fun readLine()</span>
+        <a class="function-anchor right" href="#native+fun+readLine%28%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Reads a line of input from the console.</p>
+</div></p>
+
+        <!-- Params -->
+        
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                
+            </span>
+            <p><div class="markdown-description"><p>The line of input read from the console</p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/core.ql.html">std:core.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+redirectPlayToFunction%28fn%29">
+        <span class="code">native fun redirectPlayToFunction(fn)</span>
+        <a class="function-anchor right" href="#native+fun+redirectPlayToFunction%28fn%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Starts making all <code>play</code>s invoke the given function with 1 parameter of the song.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>fn</code>
+                        
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The function to call with the song as an argument</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/music_play_redirect.ql.html">std:music/play_redirect.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+redirectPlayToList%28songList%29">
+        <span class="code">native fun redirectPlayToList(songList)</span>
+        <a class="function-anchor right" href="#native+fun+redirectPlayToList%28songList%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Starts making all <code>play</code>s add to a song list instead of the previous <code>play</code> action.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>songList</code>
+                        <span>
+                            (<a href="/library/std/entity/list.html"> list </a>)
+                        </span>
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The list to add songs to</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/music_play_redirect.ql.html">std:music/play_redirect.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+redirectReset%28%29">
+        <span class="code">native fun redirectReset()</span>
+        <a class="function-anchor right" href="#native+fun+redirectReset%28%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Stops all 'play's from any set action and returns it back to its default action.</p>
+</div></p>
+
+        <!-- Params -->
+        
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/music_play_redirect.ql.html">std:music/play_redirect.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+setFetchResolveStrategy%28resolveStrategy%29">
+        <span class="code">native fun setFetchResolveStrategy(resolveStrategy)</span>
+        <a class="function-anchor right" href="#native+fun+setFetchResolveStrategy%28resolveStrategy%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Sets the resolve strategy of fetched tracks to the given strategy. The strategy is</p>
+</div></p>
+
+        <!-- Params -->
+        
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/provider.ql.html">std:provider.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+vars%28%29">
+        <span class="code">native fun vars()</span>
+        <a class="function-anchor right" href="#native+fun+vars%28%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Prints out the variables and their values in the current scope and all parents.</p>
+</div></p>
+
+        <!-- Params -->
+        
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/debug_debug.ql.html">std:debug/debug.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+vars%28entityInstance%29">
+        <span class="code">native fun vars(entityInstance)</span>
+        <a class="function-anchor right" href="#native+fun+vars%28entityInstance%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Prints out the variables and their values in the given entity's scope and all parents.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>entityInstance</code>
+                        
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The instance of the entity to get the scope of</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/debug_debug.ql.html">std:debug/debug.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer teal">
+    <div class="container">
+        <div class="row valign-wrapper" style="margin-bottom: 0;">
+            <div class="col s12 m6 left-align">
+                <p style="margin:0;">
+                    Generated on:
+                    <span>2025-12-07 02:50:34</span>
+                    with <a href="https://github.com/RubbaBoy/QilletniDocgen" target="_blank">QilletniDocgen</a>
+                </p>
+            </div>
+            <div class="col s12 m6 right-align">
+                <p style="margin:0;">
+                    &copy; <span>2025</span> Adam Yarris. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+<!-- Materialize JS -->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" crossorigin="anonymous"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.31/dist/flexsearch.bundle.min.js"></script>
+<script src="/scripts/search.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        initializeData("\/library\/std\/index.json");
+    });
+</script>
+
+</body>
+</html>

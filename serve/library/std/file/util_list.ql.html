@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html xmlns:function="http://www.w3.org/1999/xhtml"
+      xmlns:entity="http://www.w3.org/1999/xhtml"
+      xmlns:formatteddoc="http://www.w3.org/1999/xhtml"
+      xmlns:constructor="http://www.w3.org/1999/xhtml" xmlns:field="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Qilletni Docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    
+    <nav class="teal">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo" style="margin-left: 1rem;">Qilletni Docs</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+                <li>
+                    <!-- Search form: style with Materialize or custom CSS -->
+                    <form onsubmit="return false;" class="nav-search">
+                        <div class="input-field">
+                            <i class="material-icons prefix search-icon">search</i>
+                            <input id="search-input" type="text" placeholder="Search docs..." required>
+                        </div>
+                    </form>
+                </li>
+
+                <li><a href="/">All Libraries</a></li>
+                <li>
+                    <a href="/library/std/files.html">Library Files</a>
+                </li>
+                <li>
+                    <a href="/library/std/index.html">std</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="search-popup" class="card" style="display: none;">
+        <ul id="search-results-list" class="collection" style="margin: 0;"></ul>
+    </div>
+
+
+    <!-- Main container -->
+    <div class="container" style="margin-top: 2rem;">
+        <!-- Title & Intro -->
+        <div class="row">
+            <div class="col s12">
+                <h2 class="library-title">list.ql</h2>
+                <code class="library-version">util/list.ql</code>
+
+                <div class="page-description">
+                    Contents of the file.
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- Function Overview (if functions exist) -->
+        <div class="row doc-overview">
+            <div class="col s12">
+                <h4>Function Overview</h4>
+                <div class="doc-overview-container">
+                    <table class="highlight responsive-table">
+                        <thead>
+                        <tr class="overview-header">
+                            <th class="left-column">Function</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="left-column">
+                                <a class="monospace" href="#native+fun+size%28%29+on+list">native fun size() on list</a>
+                                <!-- Extension info placeholder, if any -->
+                                <!--                            <a function:fromExtension="${documentedFunction}" class="from-extension"></a>-->
+                            </td>
+                            <td>Gets the size of the list.</td>
+                        </tr>
+                        <tr>
+                            <td class="left-column">
+                                <a class="monospace" href="#fun+isEmpty%28lst%29+on+list">fun isEmpty(lst) on list</a>
+                                <!-- Extension info placeholder, if any -->
+                                <!--                            <a function:fromExtension="${documentedFunction}" class="from-extension"></a>-->
+                            </td>
+                            <td>Checks if the list is empty.</td>
+                        </tr>
+                        <tr>
+                            <td class="left-column">
+                                <a class="monospace" href="#native+fun+add%28item%29+on+list">native fun add(item) on list</a>
+                                <!-- Extension info placeholder, if any -->
+                                <!--                            <a function:fromExtension="${documentedFunction}" class="from-extension"></a>-->
+                            </td>
+                            <td>Adds an item to the list.</td>
+                        </tr>
+                        <tr>
+                            <td class="left-column">
+                                <a class="monospace" href="#native+fun+add%28index%2C+item%29+on+list">native fun add(index, item) on list</a>
+                                <!-- Extension info placeholder, if any -->
+                                <!--                            <a function:fromExtension="${documentedFunction}" class="from-extension"></a>-->
+                            </td>
+                            <td>Adds an item to the list at the specified index.</td>
+                        </tr>
+                        <tr>
+                            <td class="left-column">
+                                <a class="monospace" href="#native+fun+addAll%28itemList%29+on+list">native fun addAll(itemList) on list</a>
+                                <!-- Extension info placeholder, if any -->
+                                <!--                            <a function:fromExtension="${documentedFunction}" class="from-extension"></a>-->
+                            </td>
+                            <td>Adds all items of the given list to the current list.</td>
+                        </tr>
+                        <tr>
+                            <td class="left-column">
+                                <a class="monospace" href="#native+fun+remove%28index%29+on+list">native fun remove(index) on list</a>
+                                <!-- Extension info placeholder, if any -->
+                                <!--                            <a function:fromExtension="${documentedFunction}" class="from-extension"></a>-->
+                            </td>
+                            <td>Removes an item from the list at the given index.</td>
+                        </tr>
+                        <tr>
+                            <td class="left-column">
+                                <a class="monospace" href="#native+fun+contains%28item%29+on+list">native fun contains(item) on list</a>
+                                <!-- Extension info placeholder, if any -->
+                                <!--                            <a function:fromExtension="${documentedFunction}" class="from-extension"></a>-->
+                            </td>
+                            <td>Checks if the given item is contained in the list.</td>
+                        </tr>
+                        <tr>
+                            <td class="left-column">
+                                <a class="monospace" href="#native+fun+subList%28fromIndex%2C+toIndex%29+on+list">native fun subList(fromIndex, toIndex) on list</a>
+                                <!-- Extension info placeholder, if any -->
+                                <!--                            <a function:fromExtension="${documentedFunction}" class="from-extension"></a>-->
+                            </td>
+                            <td>Returns a portion of the current list from the specified starting index to the end of the list.</td>
+                        </tr>
+                        <tr>
+                            <td class="left-column">
+                                <a class="monospace" href="#native+fun+indexOf%28item%29+on+list">native fun indexOf(item) on list</a>
+                                <!-- Extension info placeholder, if any -->
+                                <!--                            <a function:fromExtension="${documentedFunction}" class="from-extension"></a>-->
+                            </td>
+                            <td>Checks the index of the given item in the list.</td>
+                        </tr>
+                        <tr>
+                            <td class="left-column">
+                                <a class="monospace" href="#native+fun+join%28delimiter%29+on+list">native fun join(delimiter) on list</a>
+                                <!-- Extension info placeholder, if any -->
+                                <!--                            <a function:fromExtension="${documentedFunction}" class="from-extension"></a>-->
+                            </td>
+                            <td>Joins the items of the list into a single string.</td>
+                        </tr>
+                        <tr>
+                            <td class="left-column">
+                                <a class="monospace" href="#native+fun+sort%28%29+on+list">native fun sort() on list</a>
+                                <!-- Extension info placeholder, if any -->
+                                <!--                            <a function:fromExtension="${documentedFunction}" class="from-extension"></a>-->
+                            </td>
+                            <td>Sorts a list of numbers or strings in-place.</td>
+                        </tr>
+                        <tr>
+                            <td class="left-column">
+                                <a class="monospace" href="#native+fun+sortReverse%28%29+on+list">native fun sortReverse() on list</a>
+                                <!-- Extension info placeholder, if any -->
+                                <!--                            <a function:fromExtension="${documentedFunction}" class="from-extension"></a>-->
+                            </td>
+                            <td>Sorts a list of numbers or strings in-place, in reverse order.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fields section (simple list) -->
+        
+
+        <!-- Functions Section (cards) -->
+        <div class="row function-definitions">
+            <div class="col s12">
+                <h4>Functions</h4>
+
+                <div class="card function-doc hoverable">
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+size%28%29+on+list">
+        <span class="code">native fun size() on list</span>
+        <a class="function-anchor right" href="#native+fun+size%28%29+on+list">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Gets the size of the list.</p>
+</div></p>
+
+        <!-- Params -->
+        
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                <a class="return-type" href="/library/std/entity/int.html"> int </a>
+            </span>
+            <p><div class="markdown-description"><p>The number of items in the list</p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/util_list.ql.html">std:util/list.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <div class="card function-doc hoverable">
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="fun+isEmpty%28lst%29+on+list">
+        <span class="code">fun isEmpty(lst) on list</span>
+        <a class="function-anchor right" href="#fun+isEmpty%28lst%29+on+list">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Checks if the list is empty.</p>
+</div></p>
+
+        <!-- Params -->
+        
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                <a class="return-type" href="/library/std/entity/boolean.html"> boolean </a>
+            </span>
+            <p><div class="markdown-description"><p>If the list is empty</p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/util_list.ql.html">std:util/list.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <div class="card function-doc hoverable">
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+add%28item%29+on+list">
+        <span class="code">native fun add(item) on list</span>
+        <a class="function-anchor right" href="#native+fun+add%28item%29+on+list">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Adds an item to the list.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>item</code>
+                        
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The item to add</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/util_list.ql.html">std:util/list.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <div class="card function-doc hoverable">
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+add%28index%2C+item%29+on+list">
+        <span class="code">native fun add(index, item) on list</span>
+        <a class="function-anchor right" href="#native+fun+add%28index%2C+item%29+on+list">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Adds an item to the list at the specified index.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>index</code>
+                        
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The index to add the item at</p>
+</div></span>
+                    </td>
+                </tr>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>item</code>
+                        
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The item to add</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        <div>
+            <span class="function-params">Errors</span>
+            <p><div class="markdown-description"><p>If the index is out of bounds</p>
+</div></p>
+        </div>
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/util_list.ql.html">std:util/list.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <div class="card function-doc hoverable">
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+addAll%28itemList%29+on+list">
+        <span class="code">native fun addAll(itemList) on list</span>
+        <a class="function-anchor right" href="#native+fun+addAll%28itemList%29+on+list">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Adds all items of the given list to the current list.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>itemList</code>
+                        
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The items to add</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/util_list.ql.html">std:util/list.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <div class="card function-doc hoverable">
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+remove%28index%29+on+list">
+        <span class="code">native fun remove(index) on list</span>
+        <a class="function-anchor right" href="#native+fun+remove%28index%29+on+list">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Removes an item from the list at the given index.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>index</code>
+                        
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The index of the item to remove</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                
+            </span>
+            <p><div class="markdown-description"><p>The item that was removed</p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        <div>
+            <span class="function-params">Errors</span>
+            <p><div class="markdown-description"><p>If the index is out of bounds</p>
+</div></p>
+        </div>
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/util_list.ql.html">std:util/list.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <div class="card function-doc hoverable">
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+contains%28item%29+on+list">
+        <span class="code">native fun contains(item) on list</span>
+        <a class="function-anchor right" href="#native+fun+contains%28item%29+on+list">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Checks if the given item is contained in the list.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>index</code>
+                        
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The index of the item to remove</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                <a class="return-type" href="/library/std/entity/boolean.html"> boolean </a>
+            </span>
+            <p><div class="markdown-description"><p>If the specified item is in the list</p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/util_list.ql.html">std:util/list.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <div class="card function-doc hoverable">
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+subList%28fromIndex%2C+toIndex%29+on+list">
+        <span class="code">native fun subList(fromIndex, toIndex) on list</span>
+        <a class="function-anchor right" href="#native+fun+subList%28fromIndex%2C+toIndex%29+on+list">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Returns a portion of the current list from the specified starting index to the end of the list.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>fromIndex</code>
+                        
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The inclusive starting index of the list</p>
+</div></span>
+                    </td>
+                </tr>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>toIndex</code>
+                        
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The exclusive ending index of the list</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                <a class="return-type" href="/library/std/entity/list.html"> list </a>
+            </span>
+            <p><div class="markdown-description"><p>The created sublist</p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/util_list.ql.html">std:util/list.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <div class="card function-doc hoverable">
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+indexOf%28item%29+on+list">
+        <span class="code">native fun indexOf(item) on list</span>
+        <a class="function-anchor right" href="#native+fun+indexOf%28item%29+on+list">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Checks the index of the given item in the list.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>item</code>
+                        
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The item to check the location of</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                <a class="return-type" href="/library/std/entity/int.html"> int </a>
+            </span>
+            <p><div class="markdown-description"><p>The index of the item, or -1 if it is not in the list</p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/util_list.ql.html">std:util/list.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <div class="card function-doc hoverable">
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+join%28delimiter%29+on+list">
+        <span class="code">native fun join(delimiter) on list</span>
+        <a class="function-anchor right" href="#native+fun+join%28delimiter%29+on+list">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Joins the items of the list into a single string.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>delimiter</code>
+                        
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The string to join the items with</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                <a class="return-type" href="/library/std/entity/string.html"> string </a>
+            </span>
+            <p><div class="markdown-description"><p>The joined string</p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/util_list.ql.html">std:util/list.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <div class="card function-doc hoverable">
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+sort%28%29+on+list">
+        <span class="code">native fun sort() on list</span>
+        <a class="function-anchor right" href="#native+fun+sort%28%29+on+list">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Sorts a list of numbers or strings in-place.</p>
+</div></p>
+
+        <!-- Params -->
+        
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                <a class="return-type" href="/library/std/entity/list.html"> list </a>
+            </span>
+            <p><div class="markdown-description"><p>The sorted list</p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/util_list.ql.html">std:util/list.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <div class="card function-doc hoverable">
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+sortReverse%28%29+on+list">
+        <span class="code">native fun sortReverse() on list</span>
+        <a class="function-anchor right" href="#native+fun+sortReverse%28%29+on+list">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Sorts a list of numbers or strings in-place, in reverse order.</p>
+</div></p>
+
+        <!-- Params -->
+        
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                <a class="return-type" href="/library/std/entity/list.html"> list </a>
+            </span>
+            <p><div class="markdown-description"><p>The sorted list</p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/std/file/util_list.ql.html">std:util/list.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer teal">
+    <div class="container">
+        <div class="row valign-wrapper" style="margin-bottom: 0;">
+            <div class="col s12 m6 left-align">
+                <p style="margin:0;">
+                    Generated on:
+                    <span>2025-12-07 02:50:34</span>
+                    with <a href="https://github.com/RubbaBoy/QilletniDocgen" target="_blank">QilletniDocgen</a>
+                </p>
+            </div>
+            <div class="col s12 m6 right-align">
+                <p style="margin:0;">
+                    &copy; <span>2025</span> Adam Yarris. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+<!-- Materialize JS (for any interactive components) -->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.31/dist/flexsearch.bundle.min.js"></script>
+<script src="/scripts/search.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        initializeData(null);
+    });
+</script>
+</body>
+</html>
