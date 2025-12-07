@@ -15,7 +15,7 @@ jobs:
     container:
       image: ghcr.io/qilletni/qilletni:snapshot
     permissions:
-      contents: read
+      contents: write
       deployments: write
 
     name: Deploy to Cloudflare Pages
