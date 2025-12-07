@@ -20,13 +20,13 @@ jobs:
 
     name: Deploy to Cloudflare Pages
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
       - name: Install jq
         run: |
           apt-get update
           apt-get install -y jq git
+
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Download latest of library
         run: curl https://qpm.qilletni.dev/packages/qilletni/${{ github.event.inputs.library }}/latest -o /tmp/library.qll
