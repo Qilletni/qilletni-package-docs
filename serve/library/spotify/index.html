@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html xmlns:function="http://www.w3.org/1999/xhtml"
+      xmlns:entity="http://www.w3.org/1999/xhtml"
+      xmlns:formatteddoc="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Qilletni Docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+          integrity="sha384-..."
+          crossorigin="anonymous">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+    <!-- Your SCSS compiled to style.css (matching the final style) -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    
+    <nav class="teal">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo" style="margin-left: 1rem;">Qilletni Docs</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+                <li>
+                    <!-- Search form: style with Materialize or custom CSS -->
+                    <form onsubmit="return false;" class="nav-search">
+                        <div class="input-field">
+                            <i class="material-icons prefix search-icon">search</i>
+                            <input id="search-input" type="text" placeholder="Search docs..." required>
+                        </div>
+                    </form>
+                </li>
+
+                <li><a href="/">All Libraries</a></li>
+                <li>
+                    <a href="/library/spotify/files.html">Library Files</a>
+                </li>
+                <li>
+                    <a href="/library/spotify/index.html">spotify</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="search-popup" class="card" style="display: none;">
+        <ul id="search-results-list" class="collection" style="margin: 0;"></ul>
+    </div>
+
+
+    <!-- Main container -->
+    <div class="container" style="margin-top: 2rem;">
+        <!-- Title & Intro -->
+        <div class="row title-row">
+            <div class="col s12">
+                <h2 class="library-title">Library <span>spotify</span></h2>
+                <div class="library-meta">
+                    <span class="library-version"><span>v1.0.0-SNAPSHOT</span> &#x2022; <span>Adam Yarris</span></span>
+                    <span>
+                    <a class="library-github" target="_blank" href="https://github.com/RubbaBoy/Qilletni/tree/master/qilletni-spotify">GitHub</a>
+                    <a class="library-examples" target="_blank" href="https://github.com/RubbaBoy/Qilletni/tree/master/qilletni-spotify/examples">Examples</a>
+                </span>
+                </div>
+
+                <div class="page-description">
+                    <p>A service provider and library for Spotify, allowing for recommendations, playlist modifications, and user actions.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Library Sections Row -->
+        <div class="row library-sections">
+            <!-- Entities Section -->
+            <div class="card l-box library-category">
+                <div class="card-content">
+                    <h3 class="content-subhead">Entities</h3>
+                    <div class="category-list">
+                        <table class="highlight responsive-table">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="/library/spotify/entity/Recommender.html">Recommender</a>
+                                </td>
+                                <td>A recommender that generates a list of tracks based on a set of seed artists, genres, or tracks. Various parameters are allowed to fine-tune recommendations. Any unchanged parameters will be ignored. Spotify gives definitions for the &quot;max&quot;, &quot;min&quot;, and &quot;target&quot; parameters.
+
+A minimum parameter:
+
+A ha...</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Global Functions Section -->
+            <div class="card l-box library-category">
+                <div class="card-content">
+                    <h3 class="content-subhead">Global Functions</h3>
+                    <div class="category-list">
+                        <table class="highlight responsive-table">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+addToPlaylist%28playlist%2C+songList%29">native fun addToPlaylist(playlist, songList)</a>
+                                </td>
+                                <td>Adds the given song list to the given playlist.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+createPlaylist%28name%29">native fun createPlaylist(name)</a>
+                                </td>
+                                <td>Creates a new playlist with the given name.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+createPlaylist%28name%2C+desc%29">native fun createPlaylist(name, desc)</a>
+                                </td>
+                                <td>Creates a new playlist with the given name and description.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+disableBlockingQueue%28%29">native fun disableBlockingQueue()</a>
+                                </td>
+                                <td>When songs are played, they are added to the queue immediately.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#fun+enableBlockingQueue%28%29">fun enableBlockingQueue()</a>
+                                </td>
+                                <td>When songs are played, they are added to the queue when the currently playing song ends. The first 2 songs will be added immediately as a buffer, but sequential ones will wait for the song to end befo...</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+enableBlockingQueue%28fastPolling%29">native fun enableBlockingQueue(fastPolling)</a>
+                                </td>
+                                <td>When songs are played, they are added to the queue when the currently playing song ends. The first 2 songs will be added immediately as a buffer, but sequential ones will wait for the song to end befo...</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#fun+onSongPlay%28fn%29">fun onSongPlay(fn)</a>
+                                </td>
+                                <td>Calls a callback function when the currently playing song is changed on a Spotify account, with a polling time of 5000ms.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="monospace" href="#native+fun+onSongPlay%28fn%2C+pollTime%29">native fun onSongPlay(fn, pollTime)</a>
+                                </td>
+                                <td>Calls a callback function when the currently playing song is changed on a Spotify account.</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Import Aliases Section -->
+            <!--                <div class="card l-box library-category">-->
+            <!--                    <div class="card-content">-->
+            <!--                        <h3 class="content-subhead">Import Aliases</h3>-->
+            <!--                        <div class="category-list">-->
+            <!--                            <table class="highlight responsive-table">-->
+            <!--                                <tbody>-->
+            <!--                                <tr>-->
+            <!--                                    <td><a href="#">spotify</a></td>-->
+            <!--                                    <td>This is a description for spotify.</td>-->
+            <!--                                </tr>-->
+            <!--                                <tr>-->
+            <!--                                    <td><a href="#">spotify.builder</a></td>-->
+            <!--                                    <td>This is a description for spotify.builder.</td>-->
+            <!--                                </tr>-->
+            <!--                                <tr>-->
+            <!--                                    <td><a href="#">spotify.friends</a></td>-->
+            <!--                                    <td>This is a description for spotify.friends.</td>-->
+            <!--                                </tr>-->
+            <!--                                <tr>-->
+            <!--                                    <td><a href="#">audio</a></td>-->
+            <!--                                    <td>This is a description for audio.</td>-->
+            <!--                                </tr>-->
+            <!--                                </tbody>-->
+            <!--                            </table>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+
+            <!-- Extension Functions Section -->
+            <div class="card l-box library-category">
+                <div class="card-content">
+                    <h3 class="content-subhead">Extension Functions</h3>
+                    <div class="category-list">
+                        <table class="highlight responsive-table">
+                            <tbody>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Function Definitions -->
+        <div class="row function-definitions">
+            <div class="col s12">
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+addToPlaylist%28playlist%2C+songList%29">
+        <span class="code">native fun addToPlaylist(playlist, songList)</span>
+        <a class="function-anchor right" href="#native+fun+addToPlaylist%28playlist%2C+songList%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Adds the given song list to the given playlist.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>playlist</code>
+                        <span>
+                            (<a href="/library/std/entity/collection.html"> collection </a>)
+                        </span>
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The playlist to add the songs to</p>
+</div></span>
+                    </td>
+                </tr>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>songList</code>
+                        <span>
+                            (<a href="/library/std/entity/list.html"> list </a>)
+                        </span>
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The list of songs to add to the playlist</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/spotify/file/playlist_tools.ql.html">spotify:playlist_tools.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+createPlaylist%28name%29">
+        <span class="code">native fun createPlaylist(name)</span>
+        <a class="function-anchor right" href="#native+fun+createPlaylist%28name%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Creates a new playlist with the given name.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>name</code>
+                        <span>
+                            (<a href="/library/std/entity/string.html"> string </a>)
+                        </span>
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The name of the playlist</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                <a class="return-type" href="/library/std/entity/collection.html"> collection </a>
+            </span>
+            <p><div class="markdown-description"><p>The created playlist</p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/spotify/file/playlist_tools.ql.html">spotify:playlist_tools.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+createPlaylist%28name%2C+desc%29">
+        <span class="code">native fun createPlaylist(name, desc)</span>
+        <a class="function-anchor right" href="#native+fun+createPlaylist%28name%2C+desc%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Creates a new playlist with the given name and description.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>name</code>
+                        <span>
+                            (<a href="/library/std/entity/string.html"> string </a>)
+                        </span>
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The name of the playlist</p>
+</div></span>
+                    </td>
+                </tr>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>desc</code>
+                        <span>
+                            (<a href="/library/std/entity/string.html"> string </a>)
+                        </span>
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The description of the playlist</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        <div class="function-return-container">
+            <span class="function-params">
+                Returns
+                <a class="return-type" href="/library/std/entity/collection.html"> collection </a>
+            </span>
+            <p><div class="markdown-description"><p>The created playlist</p>
+</div></p>
+        </div>
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/spotify/file/playlist_tools.ql.html">spotify:playlist_tools.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+disableBlockingQueue%28%29">
+        <span class="code">native fun disableBlockingQueue()</span>
+        <a class="function-anchor right" href="#native+fun+disableBlockingQueue%28%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>When songs are played, they are added to the queue immediately.</p>
+</div></p>
+
+        <!-- Params -->
+        
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/spotify/file/blocking_queue.ql.html">spotify:blocking_queue.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="fun+enableBlockingQueue%28%29">
+        <span class="code">fun enableBlockingQueue()</span>
+        <a class="function-anchor right" href="#fun+enableBlockingQueue%28%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>When songs are played, they are added to the queue when the currently playing song ends. The first 2 songs will be added immediately as a buffer, but sequential ones will wait for the song to end before being added to the queue to not spam the queue.</p>
+</div></p>
+
+        <!-- Params -->
+        
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/spotify/file/blocking_queue.ql.html">spotify:blocking_queue.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+enableBlockingQueue%28fastPolling%29">
+        <span class="code">native fun enableBlockingQueue(fastPolling)</span>
+        <a class="function-anchor right" href="#native+fun+enableBlockingQueue%28fastPolling%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>When songs are played, they are added to the queue when the currently playing song ends. The first 2 songs will be added immediately as a buffer, but sequential ones will wait for the song to end before being added to the queue to not spam the queue.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>fastPolling</code>
+                        <span>
+                            (<a href="/library/std/entity/boolean.html"> boolean </a>)
+                        </span>
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>If <code>true</code>, the queue will be polled every 5 seconds. If false, it will be polled at roughly 75% of the time left on the current song.</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/spotify/file/blocking_queue.ql.html">spotify:blocking_queue.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="fun+onSongPlay%28fn%29">
+        <span class="code">fun onSongPlay(fn)</span>
+        <a class="function-anchor right" href="#fun+onSongPlay%28fn%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Calls a callback function when the currently playing song is changed on a Spotify account, with a polling time of 5000ms.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>fn</code>
+                        <span>
+                            (<a href="/library/std/entity/function.html"> function </a>)
+                        </span>
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The function to call with the song as an argument</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/spotify/file/hooks.ql.html">spotify:hooks.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+                <div>
+                    <div class="card function-doc hoverable">
+    <!-- Card header / signature -->
+    <div class="card-content teal lighten-4 function-signature" id="native+fun+onSongPlay%28fn%2C+pollTime%29">
+        <span class="code">native fun onSongPlay(fn, pollTime)</span>
+        <a class="function-anchor right" href="#native+fun+onSongPlay%28fn%2C+pollTime%29">
+            <i class="material-icons">link</i>
+        </a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-content function-innerdoc">
+        <p><div class="markdown-description"><p>Calls a callback function when the currently playing song is changed on a Spotify account.</p>
+</div></p>
+
+        <!-- Params -->
+        <div class="function-param-container" style="margin-top:1rem;">
+            <span class="function-params" style="font-weight:600;">Params</span>
+            <table class="param-table">
+                <tbody>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>fn</code>
+                        <span>
+                            (<a href="/library/std/entity/function.html"> function </a>)
+                        </span>
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The function to call with the song as an argument</p>
+</div></span>
+                    </td>
+                </tr>
+                <tr style="vertical-align: top;">
+                    <td class="code-param">
+                        <code>pollTime</code>
+                        <span>
+                            (<a href="/library/std/entity/int.html"> int </a>)
+                        </span>
+                    </td>
+                    <td class="param-desc">
+                        <span><div class="markdown-description"><p>The milliseconds to wait between polling</p>
+</div></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Returns -->
+        
+
+        <!-- Errors -->
+        
+
+        <!-- On line (if extension) -->
+        
+        
+        <div class="bottom-ribbon">
+            <a class="code file-ribbon" href="/library/spotify/file/hooks.ql.html">spotify:hooks.ql</a>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer teal">
+    <div class="container">
+        <div class="row valign-wrapper" style="margin-bottom: 0;">
+            <div class="col s12 m6 left-align">
+                <p style="margin:0;">
+                    Generated on:
+                    <span>2025-12-07 03:18:06</span>
+                    with <a href="https://github.com/RubbaBoy/QilletniDocgen" target="_blank">QilletniDocgen</a>
+                </p>
+            </div>
+            <div class="col s12 m6 right-align">
+                <p style="margin:0;">
+                    &copy; <span>2025</span> Adam Yarris. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+<!-- Materialize JS -->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" crossorigin="anonymous"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.31/dist/flexsearch.bundle.min.js"></script>
+<script src="/scripts/search.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        initializeData("\/library\/spotify\/index.json");
+    });
+</script>
+
+</body>
+</html>
