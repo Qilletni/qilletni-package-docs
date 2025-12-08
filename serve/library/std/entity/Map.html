@@ -4,8 +4,16 @@
       xmlns:formatteddoc="http://www.w3.org/1999/xhtml"
       xmlns:constructor="http://www.w3.org/1999/xhtml" xmlns:field="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Qilletni Docs</title>
+    <title>Map - std - Qilletni Docs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+    (function() {
+        var theme = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+    })();
+    </script>
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -18,7 +26,7 @@
 <body>
 <div class="wrapper">
     
-    <nav class="teal">
+    <nav class="nav-primary">
         <div class="nav-wrapper">
             <a href="/" class="brand-logo" style="margin-left: 1rem;">Qilletni Docs</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -39,6 +47,11 @@
                 </li>
                 <li>
                     <a href="/library/std/index.html">std</a>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleTheme(); return false;" class="theme-toggle">
+                        <i id="theme-icon" class="material-icons">dark_mode</i>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -178,10 +191,10 @@
             <div class="col s12">
                 <h4>Functions</h4>
 
-                <div class="card function-doc hoverable">
+                
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="static+fun+fromList%28list%29">
+    <div class="card-content function-signature" id="static+fun+fromList%28list%29">
         <span class="code">static fun fromList(list)</span>
         <a class="function-anchor right" href="#static+fun+fromList%28list%29">
             <i class="material-icons">link</i>
@@ -190,8 +203,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Creates a new map from a list of key-value pairs.</p>
+        
+            <p><div class="markdown-description"><p>Creates a new map from a list of key-value pairs.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -235,12 +251,10 @@
         </div>
     </div>
 </div>
-                </div>
-
-                <div class="card function-doc hoverable">
+                
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+put%28key%2C+value%29">
+    <div class="card-content function-signature" id="native+fun+put%28key%2C+value%29">
         <span class="code">native fun put(key, value)</span>
         <a class="function-anchor right" href="#native+fun+put%28key%2C+value%29">
             <i class="material-icons">link</i>
@@ -249,8 +263,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Puts a <code>key</code> and <code>value</code> into the map, overriding any previous value associated with the key.</p>
+        
+            <p><div class="markdown-description"><p>Puts a <code>key</code> and <code>value</code> into the map, overriding any previous value associated with the key.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -303,12 +320,10 @@
         </div>
     </div>
 </div>
-                </div>
-
-                <div class="card function-doc hoverable">
+                
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+get%28key%29">
+    <div class="card-content function-signature" id="native+fun+get%28key%29">
         <span class="code">native fun get(key)</span>
         <a class="function-anchor right" href="#native+fun+get%28key%29">
             <i class="material-icons">link</i>
@@ -317,8 +332,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Gets a value from the map by its <code>key</code> .</p>
+        
+            <p><div class="markdown-description"><p>Gets a value from the map by its <code>key</code> .</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -364,12 +382,10 @@
         </div>
     </div>
 </div>
-                </div>
-
-                <div class="card function-doc hoverable">
+                
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+containsKey%28key%29">
+    <div class="card-content function-signature" id="native+fun+containsKey%28key%29">
         <span class="code">native fun containsKey(key)</span>
         <a class="function-anchor right" href="#native+fun+containsKey%28key%29">
             <i class="material-icons">link</i>
@@ -378,8 +394,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Checks if the map contains the key <code>key</code> .</p>
+        
+            <p><div class="markdown-description"><p>Checks if the map contains the key <code>key</code> .</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -421,12 +440,10 @@
         </div>
     </div>
 </div>
-                </div>
-
-                <div class="card function-doc hoverable">
+                
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+containsValue%28value%29">
+    <div class="card-content function-signature" id="native+fun+containsValue%28value%29">
         <span class="code">native fun containsValue(value)</span>
         <a class="function-anchor right" href="#native+fun+containsValue%28value%29">
             <i class="material-icons">link</i>
@@ -435,8 +452,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Checks if the map contains any entry with the value <code>value</code> .</p>
+        
+            <p><div class="markdown-description"><p>Checks if the map contains any entry with the value <code>value</code> .</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -478,12 +498,10 @@
         </div>
     </div>
 </div>
-                </div>
-
-                <div class="card function-doc hoverable">
+                
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+keys%28%29">
+    <div class="card-content function-signature" id="native+fun+keys%28%29">
         <span class="code">native fun keys()</span>
         <a class="function-anchor right" href="#native+fun+keys%28%29">
             <i class="material-icons">link</i>
@@ -492,8 +510,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Gets a list of all keys in the map.</p>
+        
+            <p><div class="markdown-description"><p>Gets a list of all keys in the map.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         
@@ -519,12 +540,10 @@
         </div>
     </div>
 </div>
-                </div>
-
-                <div class="card function-doc hoverable">
+                
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+values%28%29">
+    <div class="card-content function-signature" id="native+fun+values%28%29">
         <span class="code">native fun values()</span>
         <a class="function-anchor right" href="#native+fun+values%28%29">
             <i class="material-icons">link</i>
@@ -533,8 +552,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Gets a list of all values in the map.</p>
+        
+            <p><div class="markdown-description"><p>Gets a list of all values in the map.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         
@@ -560,7 +582,7 @@
         </div>
     </div>
 </div>
-                </div>
+                
             </div>
         </div>
 
@@ -568,13 +590,13 @@
         
     </div>
 
-    <footer class="page-footer teal">
+    <footer class="page-footer footer-primary">
     <div class="container">
         <div class="row valign-wrapper" style="margin-bottom: 0;">
             <div class="col s12 m6 left-align">
                 <p style="margin:0;">
                     Generated on:
-                    <span>2025-12-07 02:50:34</span>
+                    <span>2025-12-08 00:38:48</span>
                     with <a href="https://github.com/RubbaBoy/QilletniDocgen" target="_blank">QilletniDocgen</a>
                 </p>
             </div>
@@ -591,6 +613,7 @@
 <!-- Materialize JS (for any interactive components) -->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.31/dist/flexsearch.bundle.min.js"></script>
+<script src="/scripts/theme.js"></script>
 <script src="/scripts/search.js"></script>
 
 <script>

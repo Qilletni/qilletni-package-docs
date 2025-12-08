@@ -5,6 +5,15 @@
 <head>
     <title>Qilletni Docs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The standard library for the Qilletni language">
+
+    <script>
+    (function() {
+        var theme = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+    })();
+    </script>
 
     <!-- Materialize CSS -->
     <link rel="stylesheet"
@@ -23,7 +32,7 @@
 
 <div class="wrapper">
     
-    <nav class="teal">
+    <nav class="nav-primary">
         <div class="nav-wrapper">
             <a href="/" class="brand-logo" style="margin-left: 1rem;">Qilletni Docs</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -44,6 +53,11 @@
                 </li>
                 <li>
                     <a href="/library/std/index.html">std</a>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleTheme(); return false;" class="theme-toggle">
+                        <i id="theme-icon" class="material-icons">dark_mode</i>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -348,36 +362,6 @@
                 </div>
             </div>
 
-
-            <!-- Import Aliases Section -->
-            <!--                <div class="card l-box library-category">-->
-            <!--                    <div class="card-content">-->
-            <!--                        <h3 class="content-subhead">Import Aliases</h3>-->
-            <!--                        <div class="category-list">-->
-            <!--                            <table class="highlight responsive-table">-->
-            <!--                                <tbody>-->
-            <!--                                <tr>-->
-            <!--                                    <td><a href="#">spotify</a></td>-->
-            <!--                                    <td>This is a description for spotify.</td>-->
-            <!--                                </tr>-->
-            <!--                                <tr>-->
-            <!--                                    <td><a href="#">spotify.builder</a></td>-->
-            <!--                                    <td>This is a description for spotify.builder.</td>-->
-            <!--                                </tr>-->
-            <!--                                <tr>-->
-            <!--                                    <td><a href="#">spotify.friends</a></td>-->
-            <!--                                    <td>This is a description for spotify.friends.</td>-->
-            <!--                                </tr>-->
-            <!--                                <tr>-->
-            <!--                                    <td><a href="#">audio</a></td>-->
-            <!--                                    <td>This is a description for audio.</td>-->
-            <!--                                </tr>-->
-            <!--                                </tbody>-->
-            <!--                            </table>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-
             <!-- Extension Functions Section -->
             <div class="card l-box library-category">
                 <div class="card-content">
@@ -638,7 +622,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+_emptyJavaMap%28%29">
+    <div class="card-content function-signature" id="native+fun+_emptyJavaMap%28%29">
         <span class="code">native fun _emptyJavaMap()</span>
         <a class="function-anchor right" href="#native+fun+_emptyJavaMap%28%29">
             <i class="material-icons">link</i>
@@ -647,8 +631,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Creates an empty <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashMap.html" target="_blank">HashMap</a> instance.</p>
+        
+            <p><div class="markdown-description"><p>Creates an empty <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashMap.html" target="_blank">HashMap</a> instance.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         
@@ -678,7 +665,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+backtrace%28%29">
+    <div class="card-content function-signature" id="native+fun+backtrace%28%29">
         <span class="code">native fun backtrace()</span>
         <a class="function-anchor right" href="#native+fun+backtrace%28%29">
             <i class="material-icons">link</i>
@@ -687,8 +674,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Prints out the current stacktrace of the program.</p>
+        
+            <p><div class="markdown-description"><p>Prints out the current stacktrace of the program.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         
@@ -711,7 +701,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+breakpoint%28%29">
+    <div class="card-content function-signature" id="native+fun+breakpoint%28%29">
         <span class="code">native fun breakpoint()</span>
         <a class="function-anchor right" href="#native+fun+breakpoint%28%29">
             <i class="material-icons">link</i>
@@ -720,8 +710,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Pauses the program and puts the user in a debugger.</p>
+        
+            <p><div class="markdown-description"><p>Pauses the program and puts the user in a debugger.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         
@@ -751,7 +744,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+breakpoint%28condition%29">
+    <div class="card-content function-signature" id="native+fun+breakpoint%28condition%29">
         <span class="code">native fun breakpoint(condition)</span>
         <a class="function-anchor right" href="#native+fun+breakpoint%28condition%29">
             <i class="material-icons">link</i>
@@ -760,8 +753,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Pauses the program and puts the user in a debugger if the given condition is <code>true</code>.</p>
+        
+            <p><div class="markdown-description"><p>Pauses the program and puts the user in a debugger if the given condition is <code>true</code>.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         
@@ -791,7 +787,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+bt%28%29">
+    <div class="card-content function-signature" id="native+fun+bt%28%29">
         <span class="code">native fun bt()</span>
         <a class="function-anchor right" href="#native+fun+bt%28%29">
             <i class="material-icons">link</i>
@@ -800,8 +796,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Prints out the current stacktrace of the program.</p>
+        
+            <p><div class="markdown-description"><p>Prints out the current stacktrace of the program.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         
@@ -824,7 +823,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+currentTimeMillis%28%29">
+    <div class="card-content function-signature" id="native+fun+currentTimeMillis%28%29">
         <span class="code">native fun currentTimeMillis()</span>
         <a class="function-anchor right" href="#native+fun+currentTimeMillis%28%29">
             <i class="material-icons">link</i>
@@ -833,8 +832,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Gets the current time in milliseconds</p>
+        
+            <p><div class="markdown-description"><p>Gets the current time in milliseconds</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         
@@ -864,7 +866,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+defaultPlay%28songToPlay%29">
+    <div class="card-content function-signature" id="native+fun+defaultPlay%28songToPlay%29">
         <span class="code">native fun defaultPlay(songToPlay)</span>
         <a class="function-anchor right" href="#native+fun+defaultPlay%28songToPlay%29">
             <i class="material-icons">link</i>
@@ -873,8 +875,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Play a song via the default &quot;play&quot; keyword invoked as a function, which will call the default &quot;play&quot; action as if no redirection happened.</p>
+        
+            <p><div class="markdown-description"><p>Play a song via the default &quot;play&quot; keyword invoked as a function, which will call the default &quot;play&quot; action as if no redirection happened.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -915,7 +920,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+exit%28code%29">
+    <div class="card-content function-signature" id="native+fun+exit%28code%29">
         <span class="code">native fun exit(code)</span>
         <a class="function-anchor right" href="#native+fun+exit%28code%29">
             <i class="material-icons">link</i>
@@ -924,8 +929,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Exits the program with the given exit code.</p>
+        
+            <p><div class="markdown-description"><p>Exits the program with the given exit code.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -966,7 +974,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+functions%28%29">
+    <div class="card-content function-signature" id="native+fun+functions%28%29">
         <span class="code">native fun functions()</span>
         <a class="function-anchor right" href="#native+fun+functions%28%29">
             <i class="material-icons">link</i>
@@ -975,8 +983,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Prints out the functions in the current scope and all parents.</p>
+        
+            <p><div class="markdown-description"><p>Prints out the functions in the current scope and all parents.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         
@@ -999,7 +1010,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+functions%28entityInstance%29">
+    <div class="card-content function-signature" id="native+fun+functions%28entityInstance%29">
         <span class="code">native fun functions(entityInstance)</span>
         <a class="function-anchor right" href="#native+fun+functions%28entityInstance%29">
             <i class="material-icons">link</i>
@@ -1008,8 +1019,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Prints out the functions in the given entity's scope and all parents.</p>
+        
+            <p><div class="markdown-description"><p>Prints out the functions in the given entity's scope and all parents.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -1048,7 +1062,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+getEnv%28name%29">
+    <div class="card-content function-signature" id="native+fun+getEnv%28name%29">
         <span class="code">native fun getEnv(name)</span>
         <a class="function-anchor right" href="#native+fun+getEnv%28name%29">
             <i class="material-icons">link</i>
@@ -1057,8 +1071,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Gets the environment variable of a given name. This will return a string, or throw an error if it can't be found.</p>
+        
+            <p><div class="markdown-description"><p>Gets the environment variable of a given name. This will return a string, or throw an error if it can't be found.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -1106,7 +1123,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="fun+getEnv%28name%2C+default%29">
+    <div class="card-content function-signature" id="fun+getEnv%28name%2C+default%29">
         <span class="code">fun getEnv(name, default)</span>
         <a class="function-anchor right" href="#fun+getEnv%28name%2C+default%29">
             <i class="material-icons">link</i>
@@ -1115,8 +1132,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Gets the environment variable of a given name. If the value is not found, a default value is returned.</p>
+        
+            <p><div class="markdown-description"><p>Gets the environment variable of a given name. If the value is not found, a default value is returned.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -1176,7 +1196,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+hasEnv%28name%29">
+    <div class="card-content function-signature" id="native+fun+hasEnv%28name%29">
         <span class="code">native fun hasEnv(name)</span>
         <a class="function-anchor right" href="#native+fun+hasEnv%28name%29">
             <i class="material-icons">link</i>
@@ -1185,8 +1205,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Checks if an environment variable is set.</p>
+        
+            <p><div class="markdown-description"><p>Checks if an environment variable is set.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -1234,7 +1257,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+print%28obj%29">
+    <div class="card-content function-signature" id="native+fun+print%28obj%29">
         <span class="code">native fun print(obj)</span>
         <a class="function-anchor right" href="#native+fun+print%28obj%29">
             <i class="material-icons">link</i>
@@ -1243,8 +1266,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Prints a string representation of the given object to the console, followed by a newline character.</p>
+        
+            <p><div class="markdown-description"><p>Prints a string representation of the given object to the console, followed by a newline character.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -1283,7 +1309,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="fun+printf%28obj%2C+formatParams%29">
+    <div class="card-content function-signature" id="fun+printf%28obj%2C+formatParams%29">
         <span class="code">fun printf(obj, formatParams)</span>
         <a class="function-anchor right" href="#fun+printf%28obj%2C+formatParams%29">
             <i class="material-icons">link</i>
@@ -1292,8 +1318,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Prints a given string to the console, followed by a newline character. The string is formatted with <code>string.format</code> using the parameters provided.</p>
+        
+            <p><div class="markdown-description"><p>Prints a given string to the console, followed by a newline character. The string is formatted with <code>string.format</code> using the parameters provided.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -1332,7 +1361,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+processBackground%28%29">
+    <div class="card-content function-signature" id="native+fun+processBackground%28%29">
         <span class="code">native fun processBackground()</span>
         <a class="function-anchor right" href="#native+fun+processBackground%28%29">
             <i class="material-icons">link</i>
@@ -1341,8 +1370,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Process background tasks until the program is terminated.</p>
+        
+            <p><div class="markdown-description"><p>Process background tasks until the program is terminated.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         
@@ -1365,7 +1397,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+random%28min%2C+max%29">
+    <div class="card-content function-signature" id="native+fun+random%28min%2C+max%29">
         <span class="code">native fun random(min, max)</span>
         <a class="function-anchor right" href="#native+fun+random%28min%2C+max%29">
             <i class="material-icons">link</i>
@@ -1374,8 +1406,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Generates a random integer between an inclusive lower bound and an exclusive upper bound.</p>
+        
+            <p><div class="markdown-description"><p>Generates a random integer between an inclusive lower bound and an exclusive upper bound.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -1435,7 +1470,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+readLine%28%29">
+    <div class="card-content function-signature" id="native+fun+readLine%28%29">
         <span class="code">native fun readLine()</span>
         <a class="function-anchor right" href="#native+fun+readLine%28%29">
             <i class="material-icons">link</i>
@@ -1444,8 +1479,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Reads a line of input from the console.</p>
+        
+            <p><div class="markdown-description"><p>Reads a line of input from the console.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         
@@ -1475,7 +1513,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+redirectPlayToFunction%28fn%29">
+    <div class="card-content function-signature" id="native+fun+redirectPlayToFunction%28fn%29">
         <span class="code">native fun redirectPlayToFunction(fn)</span>
         <a class="function-anchor right" href="#native+fun+redirectPlayToFunction%28fn%29">
             <i class="material-icons">link</i>
@@ -1484,8 +1522,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Starts making all <code>play</code>s invoke the given function with 1 parameter of the song.</p>
+        
+            <p><div class="markdown-description"><p>Starts making all <code>play</code>s invoke the given function with 1 parameter of the song.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -1524,7 +1565,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+redirectPlayToList%28songList%29">
+    <div class="card-content function-signature" id="native+fun+redirectPlayToList%28songList%29">
         <span class="code">native fun redirectPlayToList(songList)</span>
         <a class="function-anchor right" href="#native+fun+redirectPlayToList%28songList%29">
             <i class="material-icons">link</i>
@@ -1533,8 +1574,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Starts making all <code>play</code>s add to a song list instead of the previous <code>play</code> action.</p>
+        
+            <p><div class="markdown-description"><p>Starts making all <code>play</code>s add to a song list instead of the previous <code>play</code> action.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -1575,7 +1619,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+redirectReset%28%29">
+    <div class="card-content function-signature" id="native+fun+redirectReset%28%29">
         <span class="code">native fun redirectReset()</span>
         <a class="function-anchor right" href="#native+fun+redirectReset%28%29">
             <i class="material-icons">link</i>
@@ -1584,8 +1628,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Stops all 'play's from any set action and returns it back to its default action.</p>
+        
+            <p><div class="markdown-description"><p>Stops all 'play's from any set action and returns it back to its default action.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         
@@ -1608,7 +1655,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+setFetchResolveStrategy%28resolveStrategy%29">
+    <div class="card-content function-signature" id="native+fun+setFetchResolveStrategy%28resolveStrategy%29">
         <span class="code">native fun setFetchResolveStrategy(resolveStrategy)</span>
         <a class="function-anchor right" href="#native+fun+setFetchResolveStrategy%28resolveStrategy%29">
             <i class="material-icons">link</i>
@@ -1617,8 +1664,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Sets the resolve strategy of fetched tracks to the given strategy. The strategy is</p>
+        
+            <p><div class="markdown-description"><p>Sets the resolve strategy of fetched tracks to the given strategy. The strategy is</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         
@@ -1641,7 +1691,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+vars%28%29">
+    <div class="card-content function-signature" id="native+fun+vars%28%29">
         <span class="code">native fun vars()</span>
         <a class="function-anchor right" href="#native+fun+vars%28%29">
             <i class="material-icons">link</i>
@@ -1650,8 +1700,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Prints out the variables and their values in the current scope and all parents.</p>
+        
+            <p><div class="markdown-description"><p>Prints out the variables and their values in the current scope and all parents.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         
@@ -1674,7 +1727,7 @@
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+vars%28entityInstance%29">
+    <div class="card-content function-signature" id="native+fun+vars%28entityInstance%29">
         <span class="code">native fun vars(entityInstance)</span>
         <a class="function-anchor right" href="#native+fun+vars%28entityInstance%29">
             <i class="material-icons">link</i>
@@ -1683,8 +1736,11 @@
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Prints out the variables and their values in the given entity's scope and all parents.</p>
+        
+            <p><div class="markdown-description"><p>Prints out the variables and their values in the given entity's scope and all parents.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -1726,13 +1782,13 @@
     </div>
 
     <!-- Footer -->
-    <footer class="page-footer teal">
+    <footer class="page-footer footer-primary">
     <div class="container">
         <div class="row valign-wrapper" style="margin-bottom: 0;">
             <div class="col s12 m6 left-align">
                 <p style="margin:0;">
                     Generated on:
-                    <span>2025-12-07 02:50:34</span>
+                    <span>2025-12-08 00:38:47</span>
                     with <a href="https://github.com/RubbaBoy/QilletniDocgen" target="_blank">QilletniDocgen</a>
                 </p>
             </div>
@@ -1749,6 +1805,7 @@
 <!-- Materialize JS -->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" crossorigin="anonymous"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.31/dist/flexsearch.bundle.min.js"></script>
+<script src="/scripts/theme.js"></script>
 <script src="/scripts/search.js"></script>
 
 <script>

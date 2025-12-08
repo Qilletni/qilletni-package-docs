@@ -5,6 +5,15 @@
 <head>
     <title>Qilletni Docs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A service provider and library for Spotify, allowing for recommendations, playlist modifications, and user actions.">
+
+    <script>
+    (function() {
+        var theme = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+    })();
+    </script>
 
     <!-- Materialize CSS -->
     <link rel="stylesheet"
@@ -23,7 +32,7 @@
 
 <div class="wrapper">
     
-    <nav class="teal">
+    <nav class="nav-primary">
         <div class="nav-wrapper">
             <a href="/" class="brand-logo" style="margin-left: 1rem;">Qilletni Docs</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -44,6 +53,11 @@
                 </li>
                 <li>
                     <a href="/library/spotify/index.html">spotify</a>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleTheme(); return false;" class="theme-toggle">
+                        <i id="theme-icon" class="material-icons">dark_mode</i>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -160,49 +174,8 @@ A ha...</td>
                 </div>
             </div>
 
-
-            <!-- Import Aliases Section -->
-            <!--                <div class="card l-box library-category">-->
-            <!--                    <div class="card-content">-->
-            <!--                        <h3 class="content-subhead">Import Aliases</h3>-->
-            <!--                        <div class="category-list">-->
-            <!--                            <table class="highlight responsive-table">-->
-            <!--                                <tbody>-->
-            <!--                                <tr>-->
-            <!--                                    <td><a href="#">spotify</a></td>-->
-            <!--                                    <td>This is a description for spotify.</td>-->
-            <!--                                </tr>-->
-            <!--                                <tr>-->
-            <!--                                    <td><a href="#">spotify.builder</a></td>-->
-            <!--                                    <td>This is a description for spotify.builder.</td>-->
-            <!--                                </tr>-->
-            <!--                                <tr>-->
-            <!--                                    <td><a href="#">spotify.friends</a></td>-->
-            <!--                                    <td>This is a description for spotify.friends.</td>-->
-            <!--                                </tr>-->
-            <!--                                <tr>-->
-            <!--                                    <td><a href="#">audio</a></td>-->
-            <!--                                    <td>This is a description for audio.</td>-->
-            <!--                                </tr>-->
-            <!--                                </tbody>-->
-            <!--                            </table>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-
             <!-- Extension Functions Section -->
-            <div class="card l-box library-category">
-                <div class="card-content">
-                    <h3 class="content-subhead">Extension Functions</h3>
-                    <div class="category-list">
-                        <table class="highlight responsive-table">
-                            <tbody>
-                            
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 
         <!-- Function Definitions -->
@@ -211,7 +184,7 @@ A ha...</td>
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+addToPlaylist%28playlist%2C+songList%29">
+    <div class="card-content function-signature" id="native+fun+addToPlaylist%28playlist%2C+songList%29">
         <span class="code">native fun addToPlaylist(playlist, songList)</span>
         <a class="function-anchor right" href="#native+fun+addToPlaylist%28playlist%2C+songList%29">
             <i class="material-icons">link</i>
@@ -220,8 +193,11 @@ A ha...</td>
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Adds the given song list to the given playlist.</p>
+        
+            <p><div class="markdown-description"><p>Adds the given song list to the given playlist.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -274,7 +250,7 @@ A ha...</td>
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+createPlaylist%28name%29">
+    <div class="card-content function-signature" id="native+fun+createPlaylist%28name%29">
         <span class="code">native fun createPlaylist(name)</span>
         <a class="function-anchor right" href="#native+fun+createPlaylist%28name%29">
             <i class="material-icons">link</i>
@@ -283,8 +259,11 @@ A ha...</td>
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Creates a new playlist with the given name.</p>
+        
+            <p><div class="markdown-description"><p>Creates a new playlist with the given name.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -332,7 +311,7 @@ A ha...</td>
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+createPlaylist%28name%2C+desc%29">
+    <div class="card-content function-signature" id="native+fun+createPlaylist%28name%2C+desc%29">
         <span class="code">native fun createPlaylist(name, desc)</span>
         <a class="function-anchor right" href="#native+fun+createPlaylist%28name%2C+desc%29">
             <i class="material-icons">link</i>
@@ -341,8 +320,11 @@ A ha...</td>
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Creates a new playlist with the given name and description.</p>
+        
+            <p><div class="markdown-description"><p>Creates a new playlist with the given name and description.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -402,7 +384,7 @@ A ha...</td>
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+disableBlockingQueue%28%29">
+    <div class="card-content function-signature" id="native+fun+disableBlockingQueue%28%29">
         <span class="code">native fun disableBlockingQueue()</span>
         <a class="function-anchor right" href="#native+fun+disableBlockingQueue%28%29">
             <i class="material-icons">link</i>
@@ -411,8 +393,11 @@ A ha...</td>
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>When songs are played, they are added to the queue immediately.</p>
+        
+            <p><div class="markdown-description"><p>When songs are played, they are added to the queue immediately.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         
@@ -435,7 +420,7 @@ A ha...</td>
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="fun+enableBlockingQueue%28%29">
+    <div class="card-content function-signature" id="fun+enableBlockingQueue%28%29">
         <span class="code">fun enableBlockingQueue()</span>
         <a class="function-anchor right" href="#fun+enableBlockingQueue%28%29">
             <i class="material-icons">link</i>
@@ -444,8 +429,11 @@ A ha...</td>
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>When songs are played, they are added to the queue when the currently playing song ends. The first 2 songs will be added immediately as a buffer, but sequential ones will wait for the song to end before being added to the queue to not spam the queue.</p>
+        
+            <p><div class="markdown-description"><p>When songs are played, they are added to the queue when the currently playing song ends. The first 2 songs will be added immediately as a buffer, but sequential ones will wait for the song to end before being added to the queue to not spam the queue.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         
@@ -468,7 +456,7 @@ A ha...</td>
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+enableBlockingQueue%28fastPolling%29">
+    <div class="card-content function-signature" id="native+fun+enableBlockingQueue%28fastPolling%29">
         <span class="code">native fun enableBlockingQueue(fastPolling)</span>
         <a class="function-anchor right" href="#native+fun+enableBlockingQueue%28fastPolling%29">
             <i class="material-icons">link</i>
@@ -477,8 +465,11 @@ A ha...</td>
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>When songs are played, they are added to the queue when the currently playing song ends. The first 2 songs will be added immediately as a buffer, but sequential ones will wait for the song to end before being added to the queue to not spam the queue.</p>
+        
+            <p><div class="markdown-description"><p>When songs are played, they are added to the queue when the currently playing song ends. The first 2 songs will be added immediately as a buffer, but sequential ones will wait for the song to end before being added to the queue to not spam the queue.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -519,7 +510,7 @@ A ha...</td>
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="fun+onSongPlay%28fn%29">
+    <div class="card-content function-signature" id="fun+onSongPlay%28fn%29">
         <span class="code">fun onSongPlay(fn)</span>
         <a class="function-anchor right" href="#fun+onSongPlay%28fn%29">
             <i class="material-icons">link</i>
@@ -528,8 +519,11 @@ A ha...</td>
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Calls a callback function when the currently playing song is changed on a Spotify account, with a polling time of 5000ms.</p>
+        
+            <p><div class="markdown-description"><p>Calls a callback function when the currently playing song is changed on a Spotify account, with a polling time of 5000ms.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -570,7 +564,7 @@ A ha...</td>
                 <div>
                     <div class="card function-doc hoverable">
     <!-- Card header / signature -->
-    <div class="card-content teal lighten-4 function-signature" id="native+fun+onSongPlay%28fn%2C+pollTime%29">
+    <div class="card-content function-signature" id="native+fun+onSongPlay%28fn%2C+pollTime%29">
         <span class="code">native fun onSongPlay(fn, pollTime)</span>
         <a class="function-anchor right" href="#native+fun+onSongPlay%28fn%2C+pollTime%29">
             <i class="material-icons">link</i>
@@ -579,8 +573,11 @@ A ha...</td>
 
     <!-- Card body -->
     <div class="card-content function-innerdoc">
-        <p><div class="markdown-description"><p>Calls a callback function when the currently playing song is changed on a Spotify account.</p>
+        
+            <p><div class="markdown-description"><p>Calls a callback function when the currently playing song is changed on a Spotify account.</p>
 </div></p>
+            
+        
 
         <!-- Params -->
         <div class="function-param-container" style="margin-top:1rem;">
@@ -636,13 +633,13 @@ A ha...</td>
     </div>
 
     <!-- Footer -->
-    <footer class="page-footer teal">
+    <footer class="page-footer footer-primary">
     <div class="container">
         <div class="row valign-wrapper" style="margin-bottom: 0;">
             <div class="col s12 m6 left-align">
                 <p style="margin:0;">
                     Generated on:
-                    <span>2025-12-07 03:18:06</span>
+                    <span>2025-12-08 00:38:48</span>
                     with <a href="https://github.com/RubbaBoy/QilletniDocgen" target="_blank">QilletniDocgen</a>
                 </p>
             </div>
@@ -659,6 +656,7 @@ A ha...</td>
 <!-- Materialize JS -->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" crossorigin="anonymous"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.31/dist/flexsearch.bundle.min.js"></script>
+<script src="/scripts/theme.js"></script>
 <script src="/scripts/search.js"></script>
 
 <script>

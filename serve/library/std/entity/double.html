@@ -4,8 +4,16 @@
       xmlns:formatteddoc="http://www.w3.org/1999/xhtml"
       xmlns:constructor="http://www.w3.org/1999/xhtml" xmlns:field="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Qilletni Docs</title>
+    <title>double - std - Qilletni Docs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+    (function() {
+        var theme = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+    })();
+    </script>
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -18,7 +26,7 @@
 <body>
 <div class="wrapper">
     
-    <nav class="teal">
+    <nav class="nav-primary">
         <div class="nav-wrapper">
             <a href="/" class="brand-logo" style="margin-left: 1rem;">Qilletni Docs</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -39,6 +47,11 @@
                 </li>
                 <li>
                     <a href="/library/std/index.html">std</a>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleTheme(); return false;" class="theme-toggle">
+                        <i id="theme-icon" class="material-icons">dark_mode</i>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -83,13 +96,13 @@
         
     </div>
 
-    <footer class="page-footer teal">
+    <footer class="page-footer footer-primary">
     <div class="container">
         <div class="row valign-wrapper" style="margin-bottom: 0;">
             <div class="col s12 m6 left-align">
                 <p style="margin:0;">
                     Generated on:
-                    <span>2025-12-07 02:50:34</span>
+                    <span>2025-12-08 00:38:47</span>
                     with <a href="https://github.com/RubbaBoy/QilletniDocgen" target="_blank">QilletniDocgen</a>
                 </p>
             </div>
@@ -106,6 +119,7 @@
 <!-- Materialize JS (for any interactive components) -->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.31/dist/flexsearch.bundle.min.js"></script>
+<script src="/scripts/theme.js"></script>
 <script src="/scripts/search.js"></script>
 
 <script>
