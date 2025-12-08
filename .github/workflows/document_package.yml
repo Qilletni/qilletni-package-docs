@@ -1,4 +1,4 @@
-name: Deploy website
+name: Document package
 
 on:
   repository_dispatch:

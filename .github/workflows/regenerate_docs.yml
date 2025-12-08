@@ -1,0 +1,51 @@
+name: Regenerate all docs
+
+on:
+  repository_dispatch:
+    types:
+      - update-docs
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/qilletni/qilletni:snapshot
+    permissions:
+      contents: write
+      deployments: write
+
+    name: Deploy to Cloudflare Pages
+    steps:
+      - name: Install jq
+        run: |
+          apt-get update
+          apt-get install -y git
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build docs
+        run: qilletni doc -c cache/ -o serve/ -r
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy serve --project-name=${{ secrets.QILLETNI_DOCS_PROJECT_NAME }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit and push changes
+        run: |
+          git config --global --add safe.directory $GITHUB_WORKSPACE
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add serve/ cache/
+          git commit -m "Regenerated all documentation" || echo "No changes to commit"
+          git push
