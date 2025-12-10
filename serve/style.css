@@ -99,7 +99,8 @@ nav .nav-wrapper .brand-logo {
   margin-top: 2em; }
   .function-doc .card-content {
     position: relative;
-    padding-bottom: 14px; }
+    padding-bottom: 18px;
+    padding-top: 18px; }
     .function-doc .card-content .card-title {
       margin-bottom: 0.25em;
       font-weight: 600;
